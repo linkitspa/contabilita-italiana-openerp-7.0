@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_partner_form_gest_intento">
+            <field name="name">view.partner.form.gest.intento</field>
+            <field name="model">res.partner</field>
+            <!-- Inherits from base.view_partner_form -->
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                  <field name="credit_limit" position="after">
+                  <group string="Gestione lettera di intento" colspan="4">
+                                <field name="dichiarazione_esenzione_iva"/>
+                                <field name="protocollo_dichiarazione_esenzione_iva"/>
+                                <field name="data_dichiarazione_esenzione_iva"/>
+                                <field name="data_protocollo_interno_esenzione_iva"/>
+                  </group>              
+                  </field>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="account_invoice_form_int_number">
+            <field name="name">account.invoice.form.int_number</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="move_id" position="after">
+                     <group string="Gestione lettera di intento"  colspan="4">
+                         <field name="dichiarazione_esenzione_iva"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                         <field name="protocollo_dichiarazione_esenzione_iva"   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                         <field name="data_dichiarazione_esenzione_iva"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                         <field name="data_protocollo_interno_esenzione_iva"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                    </group>     
+                </field>
+            </field>
+        </record>
+        
+        
+
+    </data>
+</openerp>
+
+                   
