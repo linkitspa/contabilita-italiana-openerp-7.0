@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+         <record id="account_report_cert_rit" model="ir.ui.view">
+            <field name="name">Stampa certificazione ritenute</field>
+            <field name="model">account.print.cert_rit</field>
+            <field name="inherit_id" ref="account.account_common_report_view" />
+            <field name="arch" type="xml">
+             <data>
+            <xpath expr="/form/label[@string='']" position="replace">
+               <label nolabel="1" colspan="4" string="Stampa certificazioni e dei redditi erogati e delle ritenute operate."/>
+            </xpath>
+            <xpath expr="//page[@name='filters']" position="replace">
+            </xpath>
+           
+            <xpath expr="//field[@name='chart_account_id']" position="replace">
+                <field name="estrai4"/>
+            </xpath>
+             <xpath expr="//field[@name='target_move']" position="replace">
+            </xpath>
+            <page string="Journals" position="after">
+                        <page string="Filtro Partner" name="partners">
+                            <field name="partner_ids" colspan="4" nolabel="1" domain="[('codice_tributo','!=',None)]"/>
+                        </page>
+                       
+                    </page>
+                     <xpath expr="//page[@name='journal_ids']" position="replace">
+            </xpath>
+            </data>
+            </field>
+        </record>
+        
+      
+        
+
+        <record id="action_account_cert_rit" model="ir.actions.act_window">
+            <field name="name">Stampa certificazione ritenute</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.print.cert_rit</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="account_report_cert_rit"/>
+        </record>
+
+
+    </data>
+</openerp>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cert_rit_visibility_manager_rule2,'Configurazione ritenute',certificazione_ritenute_webkit.model_certificazioneritenute_configurazione,account.group_account_manager,1,1,1,1
+

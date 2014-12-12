@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="acc_finan_report_account" model="ir.ui.view">
+            <field name="name">acc.finan.report.account.form</field>
+            <field name="model">account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"></field>
+            <field name="arch" type="xml">
+                <field name="reconcile" position="after">
+                <group colspan="4">
+                    <field name="no_rit"/>
+                    <field name="cassa_previdenza"/>
+                </group>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

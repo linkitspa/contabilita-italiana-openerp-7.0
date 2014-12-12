@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="account_report_cert_rit_webkit" model="ir.actions.report.xml">
+             <field name="report_type">webkit</field>
+             <field name="report_name">account_report_cert_rit_webkit</field>
+             <field eval="0" name="multi"/>
+             <field eval="0" name="auto"/>
+             <field eval="1" name="header"/>
+             <field name="model">res.partner</field>
+             <field name="type">ir.actions.report.xml</field>
+             <field name="name">Report certificazione ritenute Webkit</field>
+             <field name="report_rml">certificazione_ritenute_webkit/report/templates/cert_rit_report.mako</field>
+             <field name="report_file">certificazione_ritenute_webkit/report/templates/cert_rit_report.mako</field>
+         </record>
+
+        <record id="property_account_report_cert_rit_webkit" model="ir.property">
+            <field name="name">account_report_cert_rit_webkit</field>
+            <field name="fields_id" ref="report_webkit.field_ir_act_report_xml_webkit_header"/>
+            <field eval="'ir.header_webkit,'+str(ref('cert_rit_header'))" model="ir.header_webkit" name="value"/>
+            <field eval="'ir.actions.report.xml,'+str(ref('account_report_cert_rit_webkit'))" model="ir.actions.report.xml" name="res_id"/>
+        </record>
+
+    </data>
+</openerp>

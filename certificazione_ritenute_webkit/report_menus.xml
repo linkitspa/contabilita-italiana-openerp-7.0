@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <menuitem icon="STOCK_PRINT" name="Stampa certificazioni ritenute"
+            parent="account.menu_finance_legal_statement" 
+            action="action_account_cert_rit"
+            groups="account.group_account_manager"
+            id="account.menu_account_cert_rit" 
+            sequence="70"/>
+    </data>
+</openerp>

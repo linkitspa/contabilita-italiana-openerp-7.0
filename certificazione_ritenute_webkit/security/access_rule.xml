@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model="ir.rule" id="cert_rit_visibility_manager_rule">
+        <field name="name">Configurazione ritenute</field>
+        <field name="model_id" ref="certificazione_ritenute_webkit.model_certificazioneritenute_configurazione"/>
+        <field name="global" eval="True"/>
+        <field name="groups" eval="[(4,ref('account.group_account_manager'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+       
+ 
+</data>
+</openerp>

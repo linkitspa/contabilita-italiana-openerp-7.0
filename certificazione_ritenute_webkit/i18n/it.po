@@ -1,0 +1,15 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* certificazione_ritenute_webkit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+
+
+#. module: certificazione_ritenute_webkit
+#: field:account.print.cert_rit,date1:0
+msgid "Start of period"
+msgstr "Da data"
+
